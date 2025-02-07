@@ -1,7 +1,7 @@
 import React from "react";
-import "@/styles/display.css";
 import { getMarkdownContent } from "./lib/markdown";
 import DisplayMarkdown from "./components/DisplayMarkdown";
+import styles from "../styles/display.module.css";
 
 interface MarkdownPageProps {
   content: string; // Déclare que "content" doit être une chaîne de caractères
@@ -15,7 +15,7 @@ interface Params {
 
 const MarkdownPage = ({ content } : MarkdownPageProps) => {
   return (
-    <div className="markdown-container">
+    <div className={styles.markdownContainer}>
       <DisplayMarkdown content={content} />
     </div>
   );

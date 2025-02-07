@@ -1,28 +1,28 @@
-.markdown-container {
+.markdownContainer {
     width: 99vw;
     min-height: 95vh;
     background: #fff;
     padding: 1rem;
   }
 
-  h1 {
+  .markdownContainer h1 {
     font-size: 3rem;
     color: #007bff;
     margin-bottom: 1rem;
   }
 
-  h2 {
+  .markdownContainer h2 {
     font-size: 2rem;
     color: #007bff;
     margin-bottom: 1rem;
   }
 
-  p{
+  .markdownContainer p{
     font-size: 1rem;
     margin-bottom: 1rem;
   }
 
-  a
+  .markdownContainer a
   {
 color:#007bff
   }
