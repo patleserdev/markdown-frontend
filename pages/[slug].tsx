@@ -1,5 +1,5 @@
 import React from "react";
-import  getMarkdownContent from "./lib/markdown";
+import { getMarkdownContent } from "@/lib/markdown";
 import DisplayMarkdown from "./components/DisplayMarkdown";
 import styles from "@/styles/display.module.css"
 interface MarkdownPageProps {
