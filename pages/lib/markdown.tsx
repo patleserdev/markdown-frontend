@@ -5,7 +5,7 @@ if (typeof window === "undefined") {
 import path from "path"; // Module pour gérer les chemins de fichiers
 import matter from "gray-matter"; // Librairie pour lire du Markdown avec des métadonnées
 
-export function getMarkdownContent(fileName : string) {
+export default function getMarkdownContent(fileName : string) {
   // 1. Récupérer le chemin complet du fichier
   const filePath = path.join(process.cwd(), "public", "markdown", fileName);
 
