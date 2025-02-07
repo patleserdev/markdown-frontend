@@ -5,4 +5,16 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/index",
+        permanent: true, // Redirection permanente
+      },
+    ];
+  },
+};
+
 export default nextConfig;

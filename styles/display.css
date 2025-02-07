@@ -1,0 +1,29 @@
+.markdown-container {
+    width: 99vw;
+    min-height: 95vh;
+    background: #fff;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+
+  p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  a
+  {
+color:#007bff
+  }
+  
