@@ -1,7 +1,12 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link"; // Next.js Link
-export default function DisplayMarkdown({content}){
+
+interface DisplayMarkdownProps {
+    content: string;
+  }
+
+export default function DisplayMarkdown({content} : DisplayMarkdownProps){
 
 return (
 
@@ -9,7 +14,7 @@ return (
     components={{
       a: ({ href, children }) => {
         // Vérifie si le lien est un fichier Markdown (par exemple "a-propos.md")
-        if (href.endsWith(".md")) {
+        if (href && href.endsWith(".md")) {
           const route = href.replace(".md", ""); // Supprime l'extension ".md"
           return <Link href={`/${route}`}>{children}</Link>;
         }

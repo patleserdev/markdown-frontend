@@ -1,6 +1,6 @@
 import { getMarkdownFiles } from "../lib/markdown";
 
-export default function handler(req, res) {
+export default function handler(req :any, res : any) {
   try {
     const markdownFiles = getMarkdownFiles(); // Récupère les fichiers Markdown
     
