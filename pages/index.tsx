@@ -1,9 +1,18 @@
-const indexPage = () => {
-    return (
-      <div >
-      
-      </div>
-    );
-  };
+import { getMarkdownContent } from "../lib/markdown";
 
-export default indexPage
+const Home = ({ content }: { content: string }) => {
+  return (
+    <div>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </div>
+  );
+};
+
+export async function getStaticProps() {
+  const { content } = getMarkdownContent("index.md");
+  return {
+    props: { content },
+  };
+}
+
+export default Home;
