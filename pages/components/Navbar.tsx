@@ -21,7 +21,7 @@ const Navbar = ({ markdownFiles = [] }:NavbarProps) => {
         
         finalMarkdownFiles.map((slug) => (
             <li className={styles.navItem} key={slug} >
-              <Link href={`/${slug}`}>
+              <Link href={slug === "index" ?  `/index`: `/${slug}`}>
                 {slug === "index" ? "Accueil" : slug.replace(/-/g, " ")}
               </Link>
             </li>

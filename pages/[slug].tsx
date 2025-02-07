@@ -2,7 +2,6 @@ import React from "react";
 import { getMarkdownContent } from "./lib/markdown";
 import DisplayMarkdown from "./components/DisplayMarkdown";
 import styles from "@/styles/display.module.css"
-
 interface MarkdownPageProps {
   content: string; // Déclare que "content" doit être une chaîne de caractères
 }
@@ -36,3 +35,5 @@ export async function getStaticProps({ params } : Params) {
 }
 
 export default MarkdownPage;
+
+
