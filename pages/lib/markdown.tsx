@@ -2,7 +2,7 @@ import fs from "fs"; // Module pour lire les fichiers
 import path from "path"; // Module pour gérer les chemins de fichiers
 import matter from "gray-matter"; // Librairie pour lire du Markdown avec des métadonnées
 
-export function getMarkdownContent(fileName) {
+export function getMarkdownContent(fileName : string) {
   // 1. Récupérer le chemin complet du fichier
   const filePath = path.join(process.cwd(), "public", "markdown", fileName);
 

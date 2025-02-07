@@ -5,7 +5,7 @@
     height: 5vh;
   }
   
-  .navbar-list {
+  .navbarList {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -15,11 +15,11 @@
     margin: 0;
   }
   
-  .navbar-item {
+  .navbarItem {
     margin-right: 1rem;
   }
   
-  .navbar-item a {
+  .navbarItem a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -27,7 +27,7 @@
     
   }
   
-  .navbar-item a:hover {
+  .navbarItem a:hover {
     text-decoration: underline;
   }
   

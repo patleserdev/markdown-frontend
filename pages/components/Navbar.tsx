@@ -1,5 +1,6 @@
 import Link from "next/link";
-import "@/styles/navbar.css";
+import styles from "../styles/navbar.module.css";
+
 
 interface NavbarProps {
     markdownFiles: string[];  // On s'assure que markdownFiles est un tableau de chaînes de caractères
@@ -13,13 +14,13 @@ const Navbar = ({ markdownFiles = [] }:NavbarProps) => {
     const finalMarkdownFiles = ["index", ...sortedMarkdownFiles];
 
   return (
-    <nav className="navbar">
-      <ul className="navbar-list">
+    <nav className={styles.navbar}>
+      <ul className={styles.navbarList}>
         {/* Afficher un message ou rendre vide si markdownFiles est indéfini */}
         {finalMarkdownFiles.length > 0 ? (
         
         finalMarkdownFiles.map((slug) => (
-            <li key={slug} className="navbar-item">
+            <li className={styles.navItem} key={slug} >
               <Link href={`/${slug}`}>
                 {slug === "index" ? "Accueil" : slug.replace(/-/g, " ")}
               </Link>
