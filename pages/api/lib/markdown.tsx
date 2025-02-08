@@ -4,7 +4,7 @@ import matter from "gray-matter"; // Librairie pour lire du Markdown avec des m�
 
 
 // Récupère les noms des fichiers Markdown dans un répertoire donné
-export function getMarkdownFiles(directory = "public/markdown") {
+export function getMarkdownFiles(directory = "./public/markdown") {
   const dirPath = path.join(process.cwd(), directory); // Chemin absolu
   const filenames = fs.readdirSync(dirPath); // Liste des fichiers
   return filenames
