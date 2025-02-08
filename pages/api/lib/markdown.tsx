@@ -1,21 +1,17 @@
-import fs from "fs";
-import path from "path";
+import fs from "fs"; // Module pour lire les fichiers
+import path from "path"; // Module pour gérer les chemins de fichiers
 
-export async function getStaticProps() {
-  const directory = "public/markdown";
-  const dirPath = path.join(process.cwd(), directory);
-  let markdownFiles:string[] = [];
 
-  try {
-    const filenames = fs.readdirSync(dirPath);
-    markdownFiles = filenames.filter((file) => file.endsWith(".md"));
+// Récupère les noms des fichiers Markdown dans un répertoire donné
+export function getMarkdownFiles(directory = "/markdown") {
+  const dirPath = path.join("./public", directory); // Utiliser ./public
+    try {
+    const filenames = fs.readdirSync(dirPath); // Liste des fichiers
+    return filenames
+      .filter((file) => file.endsWith(".md")) // Ne garder que les fichiers .md
+      .map((file) => file.replace(".md", "")); // Supprimer l'extension .md
   } catch (error) {
-    console.error("Error reading markdown files:", error);
+    console.error("Error reading directory:", error);
+    return [];
   }
-
-  return {
-    props: {
-      files: markdownFiles,
-    },
-  };
 }
