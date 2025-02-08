@@ -1,4 +1,4 @@
-import { getMarkdownFiles } from "@/lib/markdown.jsx";
+import { getMarkdownFiles } from "../../lib/markdown";
 
 
 export default function handler(req :any, res : any) {
